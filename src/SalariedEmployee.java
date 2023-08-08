@@ -7,19 +7,16 @@ import java.util.List;
 
 public class SalariedEmployee extends Employee{
     private double salary;
-    public SalariedEmployee(String name) {
-        super(name);
-    }
+    public SalariedEmployee(String name) { super(name); }
 
-    public SalariedEmployee(String name, double sal) {
+    public SalariedEmployee(String name, double sal,Department dept) {
         super(name);
         this.salary = sal;
+        this.department = dept;
     }
 
     @Override
-    public double calculatePay() {
-        return this.salary - (this.salary * .3);
-    }
+    public double calculatePay() { return this.salary - (this.salary * .3); }
 
     @Override
     public String generatePayStub() {
